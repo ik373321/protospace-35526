@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
   def create
     #binding.pry
    @comment = Comment.new(comments_params)
@@ -7,7 +8,7 @@ class CommentsController < ApplicationController
     else
       @prototype = @comment.prototype
       @comments = @prototype.comments
-      render:"prototype/show"
+      render :"prototypes/show"
     end
   end
   private
